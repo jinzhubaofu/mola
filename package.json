@@ -49,7 +49,7 @@
         "coveralls": "^2.11.12",
         "esdoc": "^0.4.8",
         "esdoc-es7-plugin": "0.0.3",
-        "fecs": "^0.8.6",
+        "fecs": "^1.0.0",
         "gulp": "^3.9.1",
         "gulp-babel": "^6.1.2",
         "gulp-babel-external-helpers": "^2.0.2",
