@@ -3,13 +3,13 @@
  * @author leon<ludafa@outlook.com>
  */
 
-import {EDITOR_HELPER_ATOM} from '../constants';
+import {MOLA_COMPONENT_LEVEL_ATOM} from '../constants';
 
 export const editorProps = {
     movable: false,
     resizable: 'vertical',
     droppable: {
-        sourceTypes: [EDITOR_HELPER_ATOM]
+        sourceTypes: [MOLA_COMPONENT_LEVEL_ATOM]
     },
     selectable: true
 };

@@ -6,10 +6,10 @@
 import React, {Component, PropTypes} from 'react';
 import {registerComponent} from '../util/factory';
 import {px2rem} from '../util/unit';
-import {EDITOR_HELPER_CONTAINER} from '../constants';
+import {MOLA_COMPONENT_LEVEL_CONTAINER} from '../constants';
 
 export const type = 'Container';
-export const level = EDITOR_HELPER_CONTAINER;
+export const level = MOLA_COMPONENT_LEVEL_CONTAINER;
 
 export class Container extends Component {
 
@@ -42,10 +42,6 @@ export class Container extends Component {
 
 }
 
-Container.type = type;
-
-Container.level = level;
-
 Container.propTypes = {
     height: PropTypes.number,
     backgroundImage: PropTypes.string
@@ -55,4 +51,4 @@ Container.defaultProps = {
     height: 400
 };
 
-export default registerComponent(type)(Container);
+export default registerComponent(type, level)(Container);

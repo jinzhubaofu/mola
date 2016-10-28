@@ -3,48 +3,41 @@
  * @author leon <ludafa@outlook.com>
  */
 
-import React, {Component, PropTypes} from 'react';
+import React, {PropTypes} from 'react';
 import {registerComponent} from '../util/factory';
 import {px2rem} from '../util/unit';
-import {EDITOR_HELPER_ATOM} from '../constants';
+import {MOLA_COMPONENT_LEVEL_ATOM} from '../constants';
 
 export const type = 'Link';
-export const level = EDITOR_HELPER_ATOM;
+export const level = MOLA_COMPONENT_LEVEL_ATOM;
 
-export class Link extends Component {
+export function Link(props) {
 
-    render() {
+    const {
+        top,
+        left,
+        width,
+        height,
+        backgroundImage,
+        target,
+        href
+    } = props;
 
-        const {
-            top,
-            left,
-            width,
-            height,
-            backgroundImage,
-            target,
-            href
-        } = this.props;
-
-        return (
-            <a
-                className="mola-link"
-                style={{
-                    top: px2rem(top),
-                    left: px2rem(left),
-                    width: px2rem(width),
-                    height: px2rem(height),
-                    backgroundImage: `url(${backgroundImage})`
-                }}
-                target={target}
-                href={href} />
-        );
-    }
+    return (
+        <a
+            className="mola-link"
+            style={{
+                top: px2rem(top),
+                left: px2rem(left),
+                width: px2rem(width),
+                height: px2rem(height),
+                backgroundImage: `url(${backgroundImage})`
+            }}
+            target={target}
+            href={href} />
+    );
 
 }
-
-
-Link.level = level;
-Link.type = type;
 
 Link.propTypes = {
     href: PropTypes.string.isRequired,
@@ -64,4 +57,4 @@ Link.defaultProps = {
     height: 30
 };
 
-export default registerComponent(type)(Link);
+export default registerComponent(type, level)(Link);

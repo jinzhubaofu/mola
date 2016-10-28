@@ -5,9 +5,12 @@
 
 const pool = {};
 
-export function registerComponent(type) {
+export function registerComponent(type, level) {
 
     return function (Component) {
+
+        Component.type = type;
+        Component.level = level;
 
         pool[type] = Component;
 
@@ -18,6 +21,5 @@ export function registerComponent(type) {
 }
 
 export function getComponent(type) {
-    const Component = pool[type];
-    return Component;
+    return pool[type];
 }

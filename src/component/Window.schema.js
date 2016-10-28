@@ -4,8 +4,8 @@
  */
 
 import {
-    EDITOR_HELPER_CONTAINER,
-    EDITOR_HELPER_FIXED,
+    MOLA_COMPONENT_LEVEL_CONTAINER,
+    MOLA_COMPONENT_LEVEL_FIXED,
     WINDOW_WIDTH
 } from '../constants';
 
@@ -16,8 +16,8 @@ export const editorProps = {
     resizable: 'none',
     droppable: {
         sourceTypes: [
-            EDITOR_HELPER_CONTAINER,
-            EDITOR_HELPER_FIXED
+            MOLA_COMPONENT_LEVEL_CONTAINER,
+            MOLA_COMPONENT_LEVEL_FIXED
         ]
     },
     selectable: true,
