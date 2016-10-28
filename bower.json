@@ -1,24 +1,25 @@
 {
-    "name": "melon-colorpicker",
-    "description": "Melon Color Picker",
+    "name": "mola",
+    "description": "mola & mola's friends",
     "main": [
         "lib/index.js",
-        "lib/index.styl"
+        "lib/index.styl",
+        "lib/index.css"
     ],
     "authors": [
-        "jingyuanZhang <zhangjingyuan1108@outlook.com>",
         "leon <ludafa@outlook.com>"
     ],
     "license": "MIT",
     "keywords": [
-        "react",
-        "melon",
-        "color",
-        "picker",
-        "color-picker"
+        "mola",
+        "react"
     ],
     "moduleTypes": "umd",
-    "homepage": "https://github.com/react-melon/melon-colorpicker",
+    "homepage": "https://github.com/jinzhubaofu/mola",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jinzhubaofu/mola"
+    },
     "ignore": [
         "**/.*",
         "node_modules",
@@ -32,8 +33,9 @@
         "tools"
     ],
     "dependencies": {
-        "melon": "^0.3.4",
-        "melon-core": "^0.3.2"
+        "classnames": "^2.2.5",
+        "react": "^0.14",
+        "react-dom": "^0.14"
     },
-    "version": "1.0.6"
+    "version": "1.0.0"
 }
