@@ -82,5 +82,5 @@ export default {
             'default': true
         }
     },
-    required: ['tongji']
+    required: ['title', 'hasTongji']
 };
