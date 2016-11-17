@@ -6,7 +6,7 @@
 export let os = {};
 export let browser = {};
 
-const ua = navigator.userAgent;
+const ua = typeof navigator !== 'undefined' ? navigator.userAgent : '';
 const webkit = ua.match(/Web[kK]it[\/]{0,1}([\d.]+)/);
 const android = ua.match(/(Android);?[\s\/]+([\d.]+)?/);
 const ipad = ua.match(/(iPad).*OS\s([\d_]+)/);
