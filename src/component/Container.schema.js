@@ -14,9 +14,9 @@ export const editorProps = {
     selectable: true
 };
 
-export {type, level} from './Container';
+export {type, level} from './Container.constants';
 
-const DEFAULT_SCHEMA = {
+export default {
     type: 'object',
     properties: {
         height: {
@@ -42,7 +42,3 @@ const DEFAULT_SCHEMA = {
         'height'
     ]
 };
-
-export default function (props) {
-    return DEFAULT_SCHEMA;
-}

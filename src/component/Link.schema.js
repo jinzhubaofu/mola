@@ -3,7 +3,7 @@
  * @author leon <ludafa@outlook.com>
  */
 
-export {type, level} from './Link';
+export {type, level} from './Link.constants';
 
 export const editorProps = {
     movable: true,
@@ -39,14 +39,6 @@ export default {
             'title': '高度',
             'type': 'number',
             'default': 30
-        },
-        backgroundImage: {
-            title: '背景图片',
-            type: 'string',
-            format: 'uri',
-            media: {
-                type: 'image/*'
-            }
         }
     },
     required: ['href', 'top', 'left', 'width', 'height']

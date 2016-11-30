@@ -6,10 +6,7 @@
 import React, {Component, PropTypes} from 'react';
 import {registerComponent} from '../util/factory';
 import {px2rem} from '../util/unit';
-import {MOLA_COMPONENT_LEVEL_CONTAINER} from '../constants';
-
-export const type = 'Container';
-export const level = MOLA_COMPONENT_LEVEL_CONTAINER;
+import {type, level} from './Container.constants';
 
 export class Container extends Component {
 

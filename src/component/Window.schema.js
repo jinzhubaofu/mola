@@ -9,7 +9,7 @@ import {
     WINDOW_WIDTH
 } from '../constants';
 
-export {type, level} from './Window';
+export {type, level} from './Window.constants';
 
 export const editorProps = {
     movable: false,

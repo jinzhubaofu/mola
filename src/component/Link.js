@@ -6,10 +6,7 @@
 import React, {Component, PropTypes} from 'react';
 import {registerComponent} from '../util/factory';
 import {px2rem} from '../util/unit';
-import {MOLA_COMPONENT_LEVEL_ATOM} from '../constants';
-
-export const type = 'Link';
-export const level = MOLA_COMPONENT_LEVEL_ATOM;
+import {type, level} from './Link.constants';
 
 export class Link extends Component {
 
@@ -20,7 +17,6 @@ export class Link extends Component {
             left,
             width,
             height,
-            backgroundImage,
             target,
             href
         } = this.props;
@@ -28,12 +24,12 @@ export class Link extends Component {
         return (
             <a
                 className="mola-link"
+                data-click={'{"act":"a_link"}'}
                 style={{
                     top: px2rem(top),
                     left: px2rem(left),
                     width: px2rem(width),
-                    height: px2rem(height),
-                    backgroundImage: `url(${backgroundImage})`
+                    height: px2rem(height)
                 }}
                 target={target}
                 href={href} />
