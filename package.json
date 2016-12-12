@@ -1,6 +1,6 @@
 {
   "name": "mola",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "mola & mola's friends",
   "main": "lib/index.js",
   "scripts": {
@@ -29,8 +29,8 @@
   "homepage": "https://github.com/react-melon/melon-colorpicker#readme",
   "dependencies": {
     "classnames": "^2.2.5",
-    "react": "^0.14",
-    "react-dom": "^0.14"
+    "react": "^0.14.8||^15.4.0",
+    "react-dom": "^0.14.8||^15.4.0"
   },
   "devDependencies": {
     "babel-istanbul": "^0.11.0",
