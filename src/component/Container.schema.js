@@ -21,7 +21,9 @@ export default {
     properties: {
         height: {
             'title': '高度',
-            'type': 'number',
+            'type': 'string',
+            'format': 'numeric',
+            'formatMinimum': '0',
             'default': 400
         },
         backgroundImage: {
