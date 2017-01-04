@@ -42,19 +42,19 @@ export class Link extends Component {
 Link.propTypes = {
     href: PropTypes.string.isRequired,
     target: PropTypes.oneOf(['_blank', '_self']).isRequired,
-    top: PropTypes.oneTypeOf([
+    top: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.number
     ]).isRequired,
-    left: PropTypes.oneTypeOf([
+    left: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.number
     ]).isRequired,
-    width: PropTypes.oneTypeOf([
+    width: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.number
     ]).isRequired,
-    height: PropTypes.oneTypeOf([
+    height: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.number
     ]).isRequired
