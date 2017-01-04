@@ -24,7 +24,7 @@ export default {
             'type': 'string',
             'format': 'numeric',
             'formatMinimum': '0',
-            'default': 400
+            'default': '400'
         },
         backgroundImage: {
             title: '背景图片',
