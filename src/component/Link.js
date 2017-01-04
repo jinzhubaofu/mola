@@ -42,19 +42,31 @@ export class Link extends Component {
 Link.propTypes = {
     href: PropTypes.string.isRequired,
     target: PropTypes.oneOf(['_blank', '_self']).isRequired,
-    top: PropTypes.number.isRequired,
-    left: PropTypes.number.isRequired,
-    width: PropTypes.number.isRequired,
-    height: PropTypes.number.isRequired
+    top: PropTypes.oneTypeOf([
+        PropTypes.string,
+        PropTypes.number
+    ]).isRequired,
+    left: PropTypes.oneTypeOf([
+        PropTypes.string,
+        PropTypes.number
+    ]).isRequired,
+    width: PropTypes.oneTypeOf([
+        PropTypes.string,
+        PropTypes.number
+    ]).isRequired,
+    height: PropTypes.oneTypeOf([
+        PropTypes.string,
+        PropTypes.number
+    ]).isRequired
 };
 
 Link.defaultProps = {
     href: '#',
     target: '_blank',
-    top: 0,
-    left: 0,
-    width: 200,
-    height: 30
+    top: '0',
+    left: '0',
+    width: '200',
+    height: '30'
 };
 
 export default registerComponent(type, level)(Link);
