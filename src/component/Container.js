@@ -40,12 +40,15 @@ export class Container extends Component {
 }
 
 Container.propTypes = {
-    height: PropTypes.number,
+    height: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]),
     backgroundImage: PropTypes.string
 };
 
 Container.defaultProps = {
-    height: 400
+    height: '400'
 };
 
 export default registerComponent(type, level)(Container);
