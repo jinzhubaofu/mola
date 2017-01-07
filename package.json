@@ -1,12 +1,12 @@
 {
   "name": "mola",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "mola & mola's friends",
   "main": "lib/index.js",
   "scripts": {
     "start": "node tools/server.js",
     "build": "rimraf lib & NODE_ENV=production gulp build",
-    "lint": "fecs src",
+    "lint": "fecs",
     "prepublish": "npm run lint && npm run build",
     "test": "NODE_ENV=test karma start ./test/karma.local.conf.js",
     "test-ci": "NODE_ENV=test karma start ./test/karma.travis.conf.js",
@@ -68,7 +68,8 @@
     "karma-sauce-launcher": "^1.0.0",
     "nib": "^1.1.2",
     "rimraf": "^2.5.4",
-    "watchify": "^3.7.0"
+    "watchify": "^3.7.0",
+    "webpack": "^1.14.0"
   },
   "babel": {
     "env": {

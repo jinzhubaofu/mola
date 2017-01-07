@@ -36,7 +36,6 @@ export default {
             title: '页面标题'
         },
         seo: {
-            component: 'Row',
             type: 'object',
             properties: {
                 seoKeywords: {
@@ -51,7 +50,6 @@ export default {
         },
         shareImg: {
             type: 'string',
-            component: 'Uploader',
             title: '分享图标链接',
             format: 'uri',
             media: {
@@ -77,7 +75,6 @@ export default {
         },
         hasTongji: {
             'type': 'boolean',
-            'component': 'Toggle',
             'title': '是否有百度统计',
             'default': true
         }
