@@ -33,8 +33,8 @@ MolaNode.propTypes = {
 
 export default class Mola extends Component {
 
-    resolveTreeNode(type) {
-        return getComponent(type);
+    resolveTreeNode(type, version) {
+        return getComponent(type, version);
     }
 
     renderTreeNode(type, conf, children, key, level = 0) {
@@ -56,6 +56,7 @@ export default class Mola extends Component {
 
         let {
             type,
+            version,
             children,
             ...props
         } = root;
@@ -77,7 +78,7 @@ export default class Mola extends Component {
             : null;
 
         return this.renderTreeNode(
-            this.resolveTreeNode(type),
+            this.resolveTreeNode(type, version),
             props,
             children,
             index,

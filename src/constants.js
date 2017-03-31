@@ -12,3 +12,5 @@ export const MOLA_COMPONENT_LEVEL_FIXED = `${PREFIX}/FIXED`;
 
 export const WINDOW_WIDTH = 375;
 export const BASE_FONT_SIZE = 16;
+
+export const SEPARATOR = '@';
