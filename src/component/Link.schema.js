@@ -54,6 +54,10 @@ export default {
             'enum': ['_blank', '_self'],
             'enumNames': ['新开页面', '当前页面'],
             'default': '_self'
+        },
+        name: {
+            title: '锚点',
+            type: 'string'
         }
     },
     required: ['href', 'top', 'left', 'width', 'height']
