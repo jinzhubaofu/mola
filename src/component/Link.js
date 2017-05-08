@@ -18,7 +18,8 @@ export class Link extends Component {
             width,
             height,
             target,
-            href
+            href,
+            name
         } = this.props;
 
         return (
@@ -32,7 +33,8 @@ export class Link extends Component {
                     height: px2rem(height)
                 }}
                 target={target}
-                href={href} />
+                href={href}
+                name={name} />
         );
 
     }
@@ -57,7 +59,8 @@ Link.propTypes = {
     height: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.number
-    ]).isRequired
+    ]).isRequired,
+    name: PropTypes.string
 };
 
 Link.defaultProps = {
