@@ -11,10 +11,22 @@ export const editorProps = {
     droppable: false,
     selectable: true
 };
-
-export default {
+const DEFAULT_SCHEMA = {
     type: 'object',
     properties: {
+        action: {
+            'type': 'string',
+            'title': '调起动作',
+            'enum': [
+                'link',
+                'anchor'
+            ],
+            'enumNames': [
+                '链接',
+                '锚点'
+            ],
+            'default': 'link'
+        },
         href: {
             title: '链接',
             type: 'string',
@@ -57,4 +69,44 @@ export default {
         }
     },
     required: ['href', 'top', 'left', 'width', 'height']
+};
+export default function (props) {
+    switch (props.action) {
+        case 'link':
+            return DEFAULT_SCHEMA;
+        case 'anchor':
+            return {
+                type: 'object',
+                properties: {
+                    action: {
+                        'type': 'string',
+                        'title': '调起动作',
+                        'enum': [
+                            'link',
+                            'anchor'
+                        ],
+                        'enumNames': [
+                            '链接',
+                            '锚点'
+                        ],
+                        'default': 'link'
+                    },
+                    top: {
+                        'title': 'top',
+                        'type': 'string',
+                        'format': 'numeric',
+                        'formatMinimum': '0',
+                        'default': '0'
+                    },
+                    anchorId: {
+                        title: '锚点',
+                        type: 'string'
+                    }
+
+                },
+                required: ['top', 'anchorId']
+            };
+        default:
+            return DEFAULT_SCHEMA;
+    }
 };

@@ -11,62 +11,65 @@ import {type, level} from './Link.constants';
 export class Link extends Component {
 
     render() {
+        const action = this.props.action;
 
-        const {
-            top,
-            left,
-            width,
-            height,
-            target,
-            href
-        } = this.props;
+        if (action === 'link') {
+            const {
+                top,
+                left,
+                width,
+                height,
+                target,
+                href
+            } = this.props;
 
-        return (
-            <a
-                className="mola-link"
-                data-click={'{"act":"a_link"}'}
-                style={{
-                    top: px2rem(top),
-                    left: px2rem(left),
-                    width: px2rem(width),
-                    height: px2rem(height)
-                }}
-                target={target}
-                href={href} />
-        );
+            return (
+                <a
+                    className="mola-link"
+                    data-click={'{"act":"a_link"}'}
+                    style={{
+                        top: px2rem(top),
+                        left: px2rem(left),
+                        width: px2rem(width),
+                        height: px2rem(height)
+                    }}
+                    target={target}
+                    href={href}/>
+            );
+        }
+        else if (action === 'anchor') {
+            const {
+                top,
+                anchorId
+            } = this.props;
+            return (
+                <a
+                    className="mola-link"
+                    data-click={'{"act":"a_anchor"}'}
+                    style={{
+                        top: px2rem(top),
+                        width: '100%',
+                        height: 0
+                    }}
+                    name={anchorId}
+                    id={anchorId}/>
+            );
+        }
+
 
     }
 
 }
 
 Link.propTypes = {
-    href: PropTypes.string.isRequired,
-    target: PropTypes.oneOf(['_blank', '_self']).isRequired,
-    top: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number
-    ]).isRequired,
-    left: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number
-    ]).isRequired,
-    width: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number
-    ]).isRequired,
-    height: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number
+    action: PropTypes.oneOf([
+        'link',
+        'anchor'
     ]).isRequired
 };
 
 Link.defaultProps = {
-    href: '#',
-    target: '_blank',
-    top: '0',
-    left: '0',
-    width: '200',
-    height: '30'
+    action: 'link'
 };
 
 export default registerComponent(type, level)(Link);
