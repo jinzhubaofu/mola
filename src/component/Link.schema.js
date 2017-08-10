@@ -2,9 +2,8 @@
  * @file 链接 Schema
  * @author leon <ludafa@outlook.com>
  */
-
-export {type, level} from './Link.constants';
 import update from 'react-addons-update';
+export {type, level} from './Link.constants';
 
 
 export const editorProps = {
@@ -109,4 +108,4 @@ export default function (props) {
         default:
             return LINK_SCHEMA;
     }
-};
+}
