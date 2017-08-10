@@ -72,6 +72,28 @@ export class Link extends Component {
 }
 
 Link.propTypes = {
+    href: PropTypes.string,
+    target: PropTypes.oneOf(['_blank', '_self']),
+    top: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]),
+    left: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]),
+    width: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]),
+    height: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]),
+    anchorId: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]),
     action: PropTypes.oneOf([
         'link',
         'anchor'
