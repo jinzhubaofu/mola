@@ -11,6 +11,7 @@ export const editorProps = {
     droppable: false,
     selectable: true
 };
+
 const DEFAULT_SCHEMA = {
     type: 'object',
     properties: {
@@ -70,6 +71,7 @@ const DEFAULT_SCHEMA = {
     },
     required: ['href', 'top', 'left', 'width', 'height']
 };
+
 export default function (props) {
     switch (props.action) {
         case 'link':
@@ -109,4 +111,4 @@ export default function (props) {
         default:
             return DEFAULT_SCHEMA;
     }
-};
+}
