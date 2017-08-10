@@ -9,6 +9,17 @@ import {px2rem} from '../util/unit';
 import {type, level} from './Link.constants';
 
 export class Link extends Component {
+    componentDidMount() {
+        const {
+            action,
+            anchorId
+        } = this.props;
+        const hash = window.location.hash;
+        if (action === 'anchor' && hash === '#' + anchorId) {
+            window.location.href = '#' + anchorId;
+        }
+    }
+
 
     render() {
         const action = this.props.action;
@@ -51,7 +62,6 @@ export class Link extends Component {
                         width: '100%',
                         height: 0
                     }}
-                    name={anchorId}
                     id={anchorId}/>
             );
         }
