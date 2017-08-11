@@ -31,7 +31,7 @@ export class Container extends Component {
                 style={{
                     height: px2rem(height),
                     backgroundColor,
-                    overflowY: overflowHidden ? 'hidden' : 'visible',
+                    overflow: overflowHidden ? 'hidden' : 'visible',
                     zIndex: zIndex ? zIndex : void 0
                 }}>
                 {image}
