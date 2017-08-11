@@ -43,6 +43,13 @@ export default {
             'type': 'boolean',
             'title': '隐藏多余部分',
             'default': true
+        },
+        zIndex: {
+            'type': 'string',
+            'title': '层级',
+            'format': 'numeric',
+            'formatMinimum': '0',
+            'default': '0'
         }
     },
     required: [

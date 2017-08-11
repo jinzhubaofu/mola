@@ -17,7 +17,8 @@ export class Container extends Component {
             backgroundImage,
             backgroundColor,
             overflowHidden,
-            children
+            children,
+            zIndex
         } = this.props;
 
         const image = backgroundImage
@@ -30,7 +31,8 @@ export class Container extends Component {
                 style={{
                     height: px2rem(height),
                     backgroundColor,
-                    overflowY: overflowHidden ? 'hidden' : 'visible'
+                    overflowY: overflowHidden ? 'hidden' : 'visible',
+                    zIndex: zIndex ? zIndex : void 0
                 }}>
                 {image}
                 {children}
@@ -46,12 +48,14 @@ Container.propTypes = {
         PropTypes.string,
         PropTypes.number
     ]),
-    backgroundImage: PropTypes.string
+    backgroundImage: PropTypes.string,
+    zIndex: PropTypes.string
 };
 
 Container.defaultProps = {
     height: '400',
-    overflowHidden: true
+    overflowHidden: true,
+    zIndex: ''
 };
 
 export default registerComponent(type, level)(Container);
