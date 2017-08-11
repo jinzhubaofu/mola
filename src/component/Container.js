@@ -16,6 +16,7 @@ export class Container extends Component {
             height,
             backgroundImage,
             backgroundColor,
+            overflowHidden,
             children
         } = this.props;
 
@@ -28,7 +29,8 @@ export class Container extends Component {
                 className="mola-container"
                 style={{
                     height: px2rem(height),
-                    backgroundColor
+                    backgroundColor,
+                    overflowY: overflowHidden ? 'hidden' : 'visible'
                 }}>
                 {image}
                 {children}
@@ -48,7 +50,8 @@ Container.propTypes = {
 };
 
 Container.defaultProps = {
-    height: '400'
+    height: '400',
+    overflowHidden: true
 };
 
 export default registerComponent(type, level)(Container);

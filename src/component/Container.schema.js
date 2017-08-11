@@ -38,6 +38,11 @@ export default {
             title: '背景颜色',
             type: 'string',
             format: 'color'
+        },
+        overflowHidden: {
+            'type': 'boolean',
+            'title': '隐藏多余部分',
+            'default': true
         }
     },
     required: [

@@ -3,7 +3,7 @@
   position: relative;
   background-position: 0 0;
   background-repeat: no-repeat;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .mola-container-background {
   width: 100%;
