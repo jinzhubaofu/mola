@@ -80,6 +80,11 @@ const LINK_SCHEMA = update(
                     'enum': ['_blank', '_self'],
                     'enumNames': ['新开页面', '当前页面'],
                     'default': '_self'
+                },
+                tapHighlight: {
+                    'type': 'boolean',
+                    'title': '是否有点击态',
+                    'default': true
                 }
             }
         }

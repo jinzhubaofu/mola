@@ -22,16 +22,19 @@ export class Link extends Component {
 
 
     render() {
+
         const action = this.props.action;
 
         if (action === 'link') {
+
             const {
                 top,
                 left,
                 width,
                 height,
                 target,
-                href
+                href,
+                tapHighlight
             } = this.props;
 
             return (
@@ -42,17 +45,20 @@ export class Link extends Component {
                         top: px2rem(top),
                         left: px2rem(left),
                         width: px2rem(width),
-                        height: px2rem(height)
+                        height: px2rem(height),
+                        WebkitTapHighlightColor: tapHighlight ? void 0 : 'transparent'
                     }}
                     target={target}
-                    href={href}/>
+                    href={href} />
             );
         }
         else if (action === 'anchor') {
+
             const {
                 top,
                 anchorId
             } = this.props;
+
             return (
                 <a
                     className="mola-link"
@@ -101,7 +107,8 @@ Link.propTypes = {
 };
 
 Link.defaultProps = {
-    action: 'link'
+    action: 'link',
+    tapHighlight: true
 };
 
 export default registerComponent(type, level)(Link);
