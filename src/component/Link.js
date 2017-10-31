@@ -3,7 +3,8 @@
  * @author leon <ludafa@outlook.com>
  */
 
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {registerComponent} from '../util/factory';
 import {px2rem} from '../util/unit';
 import {type, level} from './Link.constants';

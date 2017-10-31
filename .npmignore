@@ -1,5 +1,4 @@
 example
-src
 *.log
 gulpfile.js
 tools
@@ -7,3 +6,9 @@ node_modules
 test
 docs
 esdoc.json
+.coveralls.yml
+.fecsrc
+.gitignore
+.travis.yml
+bower.json
+package-lock.json
