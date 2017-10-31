@@ -1,6 +1,6 @@
 {
   "name": "mola",
-  "version": "1.1.5",
+  "version": "1.2.0",
   "description": "mola & mola's friends",
   "main": "lib/index.js",
   "scripts": {
